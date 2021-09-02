@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+:root{
+    --DarkGray: hsl(0, 0%, 63%);
+    --VeryDarkGray: hsl(0, 0%, 27%);
+}
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    
+}
