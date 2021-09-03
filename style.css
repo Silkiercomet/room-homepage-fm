@@ -8,5 +8,164 @@ html{
     box-sizing: border-box;
 }
 *,*::after,*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Spartan', sans-serif;
+    position: relative;
+}
+
+/* utilities */
+
+ul{
+    list-style: none;
+    display: flex;
+    margin-left: 1rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    padding: 0 .8rem;
+}
+
+/* utilities */
+
+/* slider container */
+
+.slider-container{
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.slider-container .left {
+    width: 60%;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container .left .nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 2.5rem 4rem;
+}
+.slider-container .left .nav figure img{
+    margin-right: 2.5rem;
+}
+.images {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    left: 0;
+    transition: 600ms ease-in-out;
+}
+.images div:nth-child(1){
+    background-image: url(images/desktop-image-hero-1.jpg);
     
 }
+.images div:nth-child(2){
+    background-image: url(images/desktop-image-hero-2.jpg);
+    right: 100%;
+}
+.images div:nth-child(3){
+    background-image: url(images/desktop-image-hero-3.jpg);
+    right: 200%;
+}
+
+.images > div {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -99;
+}
+
+
+/* right container */
+.slider-container .right {
+    width: 40%;
+    height: 75vh;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    padding: 2rem 4rem;
+    position: relative;
+}
+.text-content h1{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.text-content p, .center-content p{
+    padding: 1.5rem 0;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    color: var(--DarkGray);
+}
+.btns{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+.left-btn,.right-btn{
+    background-color: black;
+    border: none;
+    padding: 1.3rem 2rem;
+}
+.shop{
+    color: black;
+    letter-spacing: .7rem;
+    text-transform: uppercase;
+    
+}
+
+/* slider container */
+
+/* details */
+
+.details{
+    display: grid;
+    grid-template-columns: 28% 44% 28%;
+    height: 25vh;
+    position: relative;
+}
+.center-content{
+    height: 100%;
+    padding: 3rem 2rem;
+}
+.center-content h2{
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    
+}
+.left-image figure ,.right-image figure {
+    width: 100%;
+    height: 100%;
+}
+.left-image figure {
+    background-image: url(images/image-about-dark.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.right-image figure {
+    background-image: url(images/image-about-light.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/* details */
