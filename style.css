@@ -31,6 +31,11 @@ a{
 li{
     padding: 0 .8rem;
 }
+@keyframes hover-arrow{
+    0% {transform: translateX(0);}
+    50% {transform: translateX(8px);}
+    100% {transform: translateX(0);}
+}
 
 /* utilities */
 
@@ -106,9 +111,9 @@ li{
     font-size: 2.2rem;
     font-weight: 700;
 }
-.text-content p, .center-content p{
-    padding: 1.5rem 0;
-    font-size: .9rem;
+.text-content p, .center-content .container-center p{
+    padding: .8rem 0;
+    font-size: .8rem;
     line-height: 1.4rem;
     color: var(--DarkGray);
 }
@@ -127,7 +132,9 @@ li{
     color: black;
     letter-spacing: .7rem;
     text-transform: uppercase;
-    
+}
+.shop:hover i svg{
+    animation: hover-arrow 1s infinite;
 }
 
 /* slider container */
@@ -137,18 +144,22 @@ li{
 .details{
     display: grid;
     grid-template-columns: 28% 44% 28%;
-    height: 25vh;
+    min-height: 35vh;
     position: relative;
 }
 .center-content{
     height: 100%;
-    padding: 3rem 2rem;
+    padding: 70px 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-.center-content h2{
+.center-content .container-center h2{
     font-weight: 700;
     letter-spacing: .3rem;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: 1rem;
     
 }
 .left-image figure ,.right-image figure {
@@ -167,5 +178,8 @@ li{
 }
 
 
+#paragraph{
+    height: 183px;
+}
 
 /* details */
