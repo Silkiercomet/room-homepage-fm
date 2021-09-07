@@ -58,11 +58,13 @@ li{
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 1;
     padding: 2.5rem 4rem;
+    width: 100%;
+    
 }
-.slider-container .left .nav figure img{
+.slider-container .left .nav .logo img{
     margin-right: 2.5rem;
 }
 .images {
@@ -96,6 +98,51 @@ li{
     z-index: -99;
 }
 
+/* mobile nav */
+.hamburguer{
+    padding: 14px 18px ;
+    background-image: url(images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    transition: 600ms ease-in-out;
+}
+#mobile-drop{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+.mobile-nav{
+    position: absolute;
+    padding: 2rem 0;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    transform: translateY(-95px);
+    transition: 600ms ease-in-out;
+}
+.mobile-nav ul li a{
+    color: black;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+.mobile-nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#mobile-drop:checked + label .hamburguer {
+    background-image: url(images/icon-close.svg);
+    transform: translateY(-6px);
+}
+#mobile-drop:checked ~ .mobile-nav{
+    transform: translateY(0);
+}
 
 /* right container */
 .slider-container .right {
@@ -135,6 +182,11 @@ li{
 }
 .shop:hover i svg{
     animation: hover-arrow 1s infinite;
+}
+.shop:focus i svg{
+    animation: hover-arrow 1s infinite;
+    outline: none;
+    border: none;
 }
 
 /* slider container */
@@ -183,3 +235,50 @@ li{
 }
 
 /* details */
+
+/* media */
+
+@media (max-width:879px){
+    /* header hero */
+    .fd-c{
+        flex-direction: column;
+    }
+    .w-100{
+        width: 100%;
+    }
+    .slider-container .left,.slider-container .right {
+        width: 100%;
+    }
+
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    .trick{
+        visibility: hidden;
+    }
+    .slider-container .left .nav{
+        justify-content: space-between;
+        
+    }
+    .btns{
+        position: absolute;
+        left: 70%;
+        bottom: 100%;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        min-height: 55vh;
+        position: relative;
+    }
+    .left-image figure ,.right-image figure {
+        height: 65vh;
+    }
+    /* header hero */
+}
+
+/* media */
