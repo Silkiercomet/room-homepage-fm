@@ -17,14 +17,34 @@
 <body>
   <main class="wrapper">
 
-    <section class="slider-container">
+    <section class="slider-container fd-c">
 
-      <div class="left" id="container">
+      <div class="left w-100" id="container">
+        
         <header class="nav">
-          <figure>
+          <input type="checkbox" name="drop" id="mobile-drop">
+
+          <label for="mobile-drop" class="mobile">
+            <figure class="hamburguer mobile">
+
+            </figure>
+          </label>
+          <nav class="mobile-nav mobile">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          <figure class="logo">
             <img src="images/logo.svg" alt="">
           </figure>
-          <nav>
+          <div class="mobile trick">
+            <p>d</p>
+          </div>
+          <nav class="desktop">
             <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">Shop</a></li>
@@ -33,6 +53,7 @@
             </ul>
           </nav>
         </header>
+
         <div class="images">
           <div></div>
           <div></div>
@@ -40,7 +61,7 @@
         </div>
       </div>
 
-      <div class="right">
+      <div class="right w-100">
 
         <div class="text-content">
           <h1 id="header">Discover innovative ways to decorate</h1>
@@ -71,13 +92,13 @@
 
     </section>
 
-    <section class="details">
-      <div class="left-image">
+    <section class="details fd-c">
+      <div class="left-image  w-100">
         <figure>
           
         </figure>
       </div>
-      <div class="center-content">
+      <div class="center-content  w-100">
         <div class="container-center">
           <h2>
             About our furniture
@@ -90,7 +111,7 @@
           </p>
         </div>
       </div>
-      <div class="right-image">
+      <div class="right-image  w-100">
         <figure>
           
         </figure>
@@ -98,10 +119,9 @@
     </section>
 
   </main>
-  
 
   <script src="script.js"></script>
-
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
