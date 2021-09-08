@@ -180,11 +180,11 @@ li{
     letter-spacing: .7rem;
     text-transform: uppercase;
 }
-.shop:hover i svg{
+.shop i svg{
     animation: hover-arrow 1s infinite;
 }
 .shop:focus i svg{
-    animation: hover-arrow 1s infinite;
+    animation: hover-arrow 3s infinite;
     outline: none;
     border: none;
 }
@@ -265,7 +265,8 @@ li{
     }
     .btns{
         position: absolute;
-        left: 70%;
+        left: auto;
+        right: 0;
         bottom: 100%;
     }
     .details{
@@ -277,6 +278,9 @@ li{
     }
     .left-image figure ,.right-image figure {
         height: 65vh;
+    }
+    .shop i svg{
+        animation: hover-arrow 1s infinite;
     }
     /* header hero */
 }
