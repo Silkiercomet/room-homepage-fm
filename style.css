@@ -49,9 +49,11 @@ li{
 }
 .slider-container .left {
     width: 60%;
-    height: 75vh;
+    height: 85vh;
     position: relative;
+    z-index: 99;
     overflow: hidden;
+    
 }
 
 .slider-container .left .nav{
@@ -63,6 +65,12 @@ li{
     padding: 2.5rem 4rem;
     width: 100%;
     
+}
+
+.desktop ul li a{
+    position: relative;
+    text-transform: lowercase;
+    font-weight: 600;
 }
 .slider-container .left .nav .logo img{
     margin-right: 2.5rem;
@@ -125,10 +133,31 @@ li{
     transform: translateY(-95px);
     transition: 600ms ease-in-out;
 }
+
 .mobile-nav ul li a{
     color: black;
     font-weight: 600;
     text-transform: lowercase;
+    position: relative;
+    transition: 300ms ease-in-out;
+}
+.mobile-nav ul li a::after,.desktop ul li a::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -5px;
+    transition: 300ms ease-in-out;
+}
+.mobile-nav ul li a:hover::after,.desktop ul li a:hover::after{
+    width: 80%;
+}
+.desktop ul li a:hover::after{
+    background-color: white;
 }
 .mobile-nav ul{
     width: 100%;
@@ -140,19 +169,38 @@ li{
     background-image: url(images/icon-close.svg);
     transform: translateY(-6px);
 }
-#mobile-drop:checked ~ .mobile-nav{
+#mobile-drop:checked ~  .mobile-nav{
     transform: translateY(0);
+}
+#mobile-drop:checked ~ .modal{
+    display: block; /* Hidden by default */
+
+}
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 83px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+    transition: 600ms ease-in-out;
 }
 
 /* right container */
 .slider-container .right {
+    position: relative;
     width: 40%;
-    height: 75vh;
-    z-index: 1;
+    height: 85vh;
+    z-index: 51;
     display: grid;
     place-items: center;
     padding: 2rem 4rem;
-    position: relative;
+    
 }
 .text-content h1{
     font-size: 2.2rem;
@@ -169,11 +217,16 @@ li{
     left: 0;
     bottom: 0;
     display: flex;
+    
 }
 .left-btn,.right-btn{
     background-color: black;
     border: none;
     padding: 1.3rem 2rem;
+    transition: 600ms ease-in-out;
+}
+.left-btn:hover,.right-btn:hover{
+    background-color: var(--DarkGray);
 }
 .shop{
     color: black;
@@ -281,6 +334,13 @@ li{
     }
     .shop i svg{
         animation: hover-arrow 1s infinite;
+    }
+    #mobile-drop:checked + label .hamburguer {
+        position: fixed;
+        transform: translateY(-17px);
+    }
+    #mobile-drop:checked ~  .mobile-nav{
+        position: fixed;
     }
     /* header hero */
 }
