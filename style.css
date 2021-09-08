@@ -51,7 +51,6 @@ li{
     width: 60%;
     height: 85vh;
     position: relative;
-    z-index: 99;
     overflow: hidden;
     
 }
@@ -145,7 +144,7 @@ li{
     content: '';
     height: 2px;
     width: 0;
-    background-color: black;
+    
     position: absolute;
     left: 0;
     right: 0;
@@ -158,6 +157,9 @@ li{
 }
 .desktop ul li a:hover::after{
     background-color: white;
+}
+.mobile-nav ul li a:hover::after{
+    background-color: black;
 }
 .mobile-nav ul{
     width: 100%;
