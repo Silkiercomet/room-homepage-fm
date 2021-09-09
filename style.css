@@ -49,7 +49,7 @@ li{
 }
 .slider-container .left {
     width: 60%;
-    height: 85vh;
+    height: 80vh;
     position: relative;
     overflow: hidden;
     
@@ -111,7 +111,7 @@ li{
     background-image: url(images/icon-hamburger.svg);
     background-repeat: no-repeat;
     position: relative;
-    z-index: 1;
+    z-index: 99;
     transition: 600ms ease-in-out;
 }
 #mobile-drop{
@@ -131,6 +131,7 @@ li{
     margin: 0 auto;
     transform: translateY(-95px);
     transition: 600ms ease-in-out;
+    z-index: 50;
 }
 
 .mobile-nav ul li a{
@@ -144,7 +145,6 @@ li{
     content: '';
     height: 2px;
     width: 0;
-    
     position: absolute;
     left: 0;
     right: 0;
@@ -181,7 +181,7 @@ li{
 .modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 5; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 83px;
@@ -197,8 +197,8 @@ li{
 .slider-container .right {
     position: relative;
     width: 40%;
-    height: 85vh;
-    z-index: 51;
+    height: 80vh;
+    z-index: 1;
     display: grid;
     place-items: center;
     padding: 2rem 4rem;
